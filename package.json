@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "nanoid": "^3.1.30",
+    "testcafe": "^1.16.1",
+    "testcafe-reporter-html": "^1.4.6"
+  },
+  "name": "front_end_testcafe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome ./pom/tests --reporter html:tests/results/results.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
