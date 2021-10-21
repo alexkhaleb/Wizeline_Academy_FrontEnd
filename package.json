@@ -10,9 +10,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome,firefox ./pom/tests --reporter html:tests/results/results.html"
+    "test": "testcafe chrome ./pom/tests --reporter html:tests/results/results.html --concurrency 2",
+    "smoke-tests":  "testcafe chrome ./pom/tests --test-meta type=smoke",
+    "headless": "testcafe firefox:headless ./pom/tests --reporter html:tests/results/results.html"
   },
-  "author": "",
+  "author": "agarduno",
   "license": "ISC",
   "description": ""
 }
