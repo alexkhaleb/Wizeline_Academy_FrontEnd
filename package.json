@@ -10,7 +10,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome ./pom/tests --reporter html:tests/results/results.html"
+    "test": "testcafe chrome,firefox ./pom/tests --reporter html:tests/results/results.html"
   },
   "author": "",
   "license": "ISC",

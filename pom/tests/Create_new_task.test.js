@@ -17,7 +17,7 @@ test.skip ('As a user, I should be able to log in sucessfully by providing valid
 test ('As a user, I will provide a fake email and a fake password', async t => {
     await t.setTestSpeed(0.01)
     await LoginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.BADEMAIL, INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD)
-    await t.expect('.error_msg > span').contains('Wrong email or password')({timeout: 5000})
+    await t.expect('.div.error_msg').contains('Wrong email or password').ok()
 })
 
 test.skip ('As a user, I will provide a blank email and a fake password', async t => {

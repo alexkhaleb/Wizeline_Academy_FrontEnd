@@ -73,9 +73,9 @@
       <div class="client-logo" style="padding:15px"></div>
       <div class="bg-primary" style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">
         <h3>Summary</h3><br>
-        <p class="lead">Start Time: Mon Oct 18 2021 17:53:41 GMT-0500 (Central Daylight Time)</p>
-        <p class="lead">Browsers: Chrome 94.0.4606.81 / macOS 10.15.7</p>
-        <p class="lead">Duration: 18s</p>
+        <p class="lead">Start Time: Wed Oct 20 2021 10:26:55 GMT-0500 (Central Daylight Time)</p>
+        <p class="lead">Browsers: Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</p>
+        <p class="lead">Duration: 19s</p>
         <p class="lead">Tests Failed: 1 out of 1</p>
         <p class="lead">Tests Skipped: 7</p>
       </div><br>
@@ -95,15 +95,15 @@
   <td>1</td>
   <td>Login feature test</td>
   <td>As a user, I should be able to log in sucessfully by providing valid credentials</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
-  <td>0s</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
+  <td>1s</td>
   <td>skipped</td>
  </tr>
  <tr class="danger">
   <td>2</td>
   <td>Login feature test</td>
   <td>As a user, I will provide a fake email and a fake password</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>18s</td>
   <td><a href="#test-2">failed</a></td>
  </tr>
@@ -111,7 +111,7 @@
   <td>3</td>
   <td>Login feature test</td>
   <td>As a user, I will provide a blank email and a fake password</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>0s</td>
   <td>skipped</td>
  </tr>
@@ -119,7 +119,7 @@
   <td>4</td>
   <td>Login feature test</td>
   <td>As a user, I will provide a fake email and a blank password</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>0s</td>
   <td>skipped</td>
  </tr>
@@ -127,7 +127,7 @@
   <td>5</td>
   <td>Login feature test</td>
   <td>Creacion de una nueva tarea</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>0s</td>
   <td>skipped</td>
  </tr>
@@ -135,7 +135,7 @@
   <td>6</td>
   <td>Login feature test</td>
   <td>Creacion de una nueva tarea - TEST</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>0s</td>
   <td>skipped</td>
  </tr>
@@ -143,7 +143,7 @@
   <td>7</td>
   <td>Login feature test</td>
   <td>Creacion de una nueva tarea para mañana</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>0s</td>
   <td>skipped</td>
  </tr>
@@ -151,7 +151,7 @@
   <td>8</td>
   <td>Login feature test</td>
   <td>Creacion de un nuevo proyecto</td>
-  <td>Chrome 94.0.4606.81 / macOS 10.15.7</td>
+  <td>Chrome 94.0.4606.81 / macOS 10.15.7, Firefox 93.0 / macOS 10.15</td>
   <td>0s</td>
   <td>skipped</td>
  </tr>
@@ -171,7 +171,7 @@
       <br>
       <h3>Error Details</h3>
        <h4 id="test-2" style="color: red;">2. Login feature test - As a user, I will provide a fake email and a fake password</h4>
- <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">TypeError: t.expect(...).contains(...) is not a function
+ <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">TypeError: t.expect(...).contains(...).ok is not a function
 
 Browser: Chrome 94.0.4606.81 / macOS 10.15.7
 
@@ -180,14 +180,32 @@ Browser: Chrome 94.0.4606.81 / macOS 10.15.7
    17 |test (&#39;As a user, I will provide a fake email and a fake password&#39;, async t =&gt; &#123
    18 |    await t.setTestSpeed(0.01)
    19 |    await LoginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.BADEMAIL, INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD)
- &gt; 20 |    await t.expect(&#39;.error_msg &gt; span&#39;).contains(&#39;Wrong email or password&#39;)({timeout: 5000})
+ &gt; 20 |    await t.expect(&#39;.div.error_msg&#39;).contains(&#39;Wrong email or password&#39;).ok()
    21 |})
    22 |
    23 |test.skip (&#39;As a user, I will provide a blank email and a fake password&#39;, async t =&gt; {
    24 |
    25 |    await LoginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.BLANKEMAIL, INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD)
 
-   at &lt;anonymous&gt; (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:20:11)
+   at &lt;anonymous&gt; (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:20:74)
+   at asyncGeneratorStep (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:5:325)
+   at _next (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:5:663) </pre><br> <pre style="padding:15px;box-shadow: 6px 6px 6px 6px #00000033;border-radius: 10px;">TypeError: t.expect(...).contains(...).ok is not a function
+
+Browser: Firefox 93.0 / macOS 10.15
+
+   15 |&#125)
+   16 |
+   17 |test (&#39;As a user, I will provide a fake email and a fake password&#39;, async t =&gt; &#123
+   18 |    await t.setTestSpeed(0.01)
+   19 |    await LoginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.BADEMAIL, INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD)
+ &gt; 20 |    await t.expect(&#39;.div.error_msg&#39;).contains(&#39;Wrong email or password&#39;).ok()
+   21 |})
+   22 |
+   23 |test.skip (&#39;As a user, I will provide a blank email and a fake password&#39;, async t =&gt; {
+   24 |
+   25 |    await LoginPage.submitLoginForm(INVALIDCREDENTIALS.INVALID_USER.BLANKEMAIL, INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD)
+
+   at &lt;anonymous&gt; (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:20:74)
    at asyncGeneratorStep (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:5:325)
    at _next (/Users/alejandro.garduno/Documents/Front_End_TestCafe/pom/tests/Create_new_task.test.js:5:663) </pre><br>
     </div>
