@@ -3,7 +3,7 @@ import { URLS } from "../data/Constants";
 
 fixture("Create new project").page`${URLS.LOGIN_URL}`;
 
-test.meta("type", "smoke")(
+test(
   "New project Creation + Blue Color Assignment + Add as a Favorite Project",
   async (t) => {
     await t.setTestSpeed(0.01);

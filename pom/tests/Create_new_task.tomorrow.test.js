@@ -3,7 +3,7 @@ import { STANDARD_USER } from "../data/Roles";
 
 fixture("Create a new task for tomorrow").page`${URLS.LOGIN_URL}`;
 
-test("Creacion de una nueva tarea para mañana", async (t) => {
+test.meta("type", "smoke")("Creacion de una nueva tarea para mañana", async (t) => {
   await t.setTestSpeed(0.01);
   await t.useRole(STANDARD_USER);
   await t.expect("h1 > .simple_content").ok({ timeout: 5000 });
