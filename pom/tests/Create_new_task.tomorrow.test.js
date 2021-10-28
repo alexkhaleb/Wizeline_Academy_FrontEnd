@@ -1,7 +1,7 @@
 import { URLS, projectNamed } from "../data/Constants";
 import { STANDARD_USER } from "../data/Roles";
 
-fixture("Login feature test").page`${URLS.LOGIN_URL}`;
+fixture("Create a new task for tomorrow").page`${URLS.LOGIN_URL}`;
 
 test("Creacion de una nueva tarea para mañana", async (t) => {
   await t.setTestSpeed(0.01);

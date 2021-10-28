@@ -2,14 +2,10 @@ import { URLS, projectNamed } from "../data/Constants";
 import { STANDARD_USER } from "../data/Roles";
 
 fixture.beforeEach(async (t) => {
-  await t
-  .maximizeWindow()
-  .setTestSpeed(0.3)
-  .useRole(STANDARD_USER);
-})
-("Login feature test")
+  await t.maximizeWindow().setTestSpeed(0.3).useRole(STANDARD_USER);
+})("Create new task");
 
-test.meta('type','smoke')("Creacion de una nueva tarea", async (t) => {
+test.meta("type", "smoke")("Creacion de una nueva tarea", async (t) => {
   await t.expect("h1 > .simple_content").ok({ timeout: 5000 });
   await t.click("svg > g > g > path");
   await t.click(".public-DraftStyleDefault-block");

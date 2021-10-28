@@ -1,7 +1,7 @@
 import LoginPage from "../pages/LoginPage";
 import { URLS, INVALIDCREDENTIALS } from "../data/Constants";
 
-fixture("Login feature test").page`${URLS.LOGIN_URL}`;
+fixture("3 Invalid Logins").page`${URLS.LOGIN_URL}`;
 
 test("As a user, I will provide a fake email and a fake password", async (t) => {
   await t.setTestSpeed(0.7);

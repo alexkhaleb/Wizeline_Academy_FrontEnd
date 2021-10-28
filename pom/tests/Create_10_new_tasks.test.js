@@ -1,7 +1,7 @@
-import {URLS,projectNamed,} from "../data/Constants";
+import { URLS, projectNamed } from "../data/Constants";
 import { STANDARD_USER } from "../data/Roles";
 
-fixture("Login feature test").page`${URLS.LOGIN_URL}`;
+fixture("Create 10 new tasks").page`${URLS.LOGIN_URL}`;
 
 //Random test names *10
 test("10 Task Random Creation", async (t) => {
@@ -17,6 +17,7 @@ test("10 Task Random Creation", async (t) => {
     await t.click('button[type="submit"]');
     //Hasta aqui la creacion.
     //Comienza borrado
+    //await t.wait(5000);
     await t.click(".markdown_content.task_content");
     await t.click(
       'button[aria-label="More task actions"][type="button"].item_action > svg > path'

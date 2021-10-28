@@ -4,14 +4,16 @@
     "faker": "^5.5.3",
     "nanoid": "^3.1.30",
     "testcafe": "^1.16.1",
-    "testcafe-reporter-html": "^1.4.6"
+    "testcafe-reporter-html": "^1.4.6",
+    "testcafe-reporter-jenkins": "^1.0.1"
   },
   "name": "front_end_testcafe",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome,firefox ./pom/tests --reporter html:tests/results/results.html --concurrency 2",
-    "smoke-tests":  "testcafe chrome ./pom/tests --test-meta type=smoke",
+    "test": "testcafe chrome ./pom/tests",
+    "testC": "testcafe chrome ./pom/tests --reporter html:tests/results/results.html --concurrency 2",
+    "smoke-tests": "testcafe chrome ./pom/tests --test-meta type=smoke",
     "headless": "testcafe firefox:headless ./pom/tests --reporter html:tests/results/results.html"
   },
   "author": "agarduno",
