@@ -1,5 +1,6 @@
 import LoginPage from "../pages/LoginPage";
 import { URLS, INVALIDCREDENTIALS } from "../data/Constants";
+import HomePage from "../pages/HomePage";
 
 fixture("3 Invalid Logins").page`${URLS.LOGIN_URL}`;
 
@@ -13,7 +14,7 @@ test.meta("type", "smoke")("As a user, I will provide a fake email and a fake pa
     .expect(HomePage.erromsg.innerText)
     .contains("Wrong email or password");
 });
-// Aqui mando un mail vacio con password erroneo
+
 test.meta("type", "smoke")("As a user, I will provide a blank email and a fake password", async (t) => {
   await LoginPage.submitLoginForm(
     null,

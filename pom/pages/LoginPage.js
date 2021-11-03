@@ -4,8 +4,8 @@ class LoginPage {
   constructor() {
     this.usernameInput = Selector("#email");
     this.passwordInput = Selector("#password");
-    this.header = Selector("h1 > .simple_content");
-    this.erromsg = Selector("div.error_msg");
+    // this.header = Selector("h1 > .simple_content");
+    // this.erromsg = Selector("div.error_msg");
     this.submitButton = Selector(".submit_btn").withExactText("Log in");
     //this.loginButton = Selector('#submit_btn ist_button ist_button_red sel_login')
   }
