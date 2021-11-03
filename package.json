@@ -13,10 +13,14 @@
   "scripts": {
     "test": "testcafe chrome ./pom/tests",
     "testC": "testcafe chrome ./pom/tests --reporter html:tests/results/results.html --concurrency 2",
-    "smoke-tests": "testcafe chrome:headless ./pom/tests --test-meta type=smoke",
-    "headless": "testcafe chrome:headless ./pom/tests --reporter html:tests/results/results.html"
+    "smoke-tests": "testcafe chrome:headless --reporter html:tests/results/results.html ./pom/tests --test-meta type=smoke",
+    "headless": "testcafe chrome:headless ./pom/tests --reporter html:tests/results/results.html",
+    "lint-init": "eslint --init"
   },
   "author": "agarduno",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  }
 }

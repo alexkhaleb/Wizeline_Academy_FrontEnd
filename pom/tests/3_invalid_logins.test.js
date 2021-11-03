@@ -10,7 +10,7 @@ test.meta("type", "smoke")("As a user, I will provide a fake email and a fake pa
     INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD
   );
   await t
-    .expect(LoginPage.erromsg.innerText)
+    .expect(HomePage.erromsg.innerText)
     .contains("Wrong email or password");
 });
 // Aqui mando un mail vacio con password erroneo
@@ -19,7 +19,7 @@ test.meta("type", "smoke")("As a user, I will provide a blank email and a fake p
     null,
     INVALIDCREDENTIALS.INVALID_USER.BADPASSWORD
   );
-  await t.expect(LoginPage.erromsg.innerText).contains("Invalid email address");
+  await t.expect(HomePage.erromsg.innerText).contains("Invalid email address");
 });
 
 test.meta("type", "smoke")("As a user, I will provide a fake email and a blank password", async (t) => {
@@ -27,5 +27,5 @@ test.meta("type", "smoke")("As a user, I will provide a fake email and a blank p
     INVALIDCREDENTIALS.INVALID_USER.BADEMAIL,
     null
   );
-  await t.expect(LoginPage.erromsg.innerText).contains("Blank password");
+  await t.expect(HomePage.erromsg.innerText).contains("Blank password");
 });
